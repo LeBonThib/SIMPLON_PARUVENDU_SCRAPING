@@ -5,23 +5,29 @@
 
 import scrapy
 
-
 class URLHarvesterItem(scrapy.Item):
     # define the fields for your item here like:
     url = scrapy.Field()
     status = scrapy.Field()
-    brand = scrapy.Field()
 
-class CarHarvesterItem(scrapy.Item):
+class DataHarvesterItem(scrapy.Item):
     # define the fields for your item here like:
+    url = scrapy.Field()
+    status = scrapy.Field()
+    location = scrapy.Field()
     version = scrapy.Field()
     price = scrapy.Field()
     year = scrapy.Field()
-    kms = scrapy.Field()
-    fuel = scrapy.Field()
+    mileage = scrapy.Field()
+    fuel_type = scrapy.Field()
     emission = scrapy.Field()
-    consommation = scrapy.Field()
+    fuel_usage = scrapy.Field()
     transmission = scrapy.Field()
     door_nb = scrapy.Field()
-    power = scrapy.Field()
     seat_nb = scrapy.Field()
+    technical_power = scrapy.Field()
+    actual_power = scrapy.Field()
+    body_colour = scrapy.Field()
+    body_type = scrapy.Field()
+    warranty = scrapy.Field()
+    control = scrapy.Field()
