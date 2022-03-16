@@ -32,13 +32,13 @@ DOWNLOADER_MIDDLEWARES = {
 # The default global concurrency limit in Scrapy is not suitable for crawling many different domains in parallel, so you will want to increase it. How much to increase it will depend on how much CPU and memory you crawler will have available.
 CONCURRENT_REQUESTS = 100
 CONCURRENT_REQUESTS_PER_DOMAIN = 10
-ROTATING_PROXY_PAGE_RETRY_TIMES = 15
+ROTATING_PROXY_PAGE_RETRY_TIMES = 10
 
 # Currently Scrapy does DNS resolution in a blocking way with usage of thread pool. With higher concurrency levels the crawling could be slow or even fail hitting DNS resolver timeouts. Possible solution to increase the number of threads handling DNS queries. The DNS queue will be processed faster speeding up establishing of connection and crawling overall.
-REACTOR_THREADPOOL_MAXSIZE = 20
+REACTOR_THREADPOOL_MAXSIZE = 30
 
 # Scrapy's default scheduler priority queue is 'scrapy.pqueues.ScrapyPriorityQueue'. It works best during single-domain crawl. It does not work well with crawling many different domains in parallel
-SCHEDULER_PRIORITY_QUEUE = 'scrapy.pqueues.DownloaderAwarePriorityQueue'
+# SCHEDULER_PRIORITY_QUEUE = 'scrapy.pqueues.DownloaderAwarePriorityQueue'
 
 # Retrying failed HTTP requests can slow down the crawls substantially, specially when sites causes are very slow (or fail) to respond, thus causing a timeout error which gets retried many times, unnecessarily, preventing crawler capacity to be reused for other domains.
 RETRY_ENABLED = False
@@ -116,6 +116,8 @@ AUTOTHROTTLE_START_DELAY = 5
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+ROTATING_PROXY_LIST_PATH = './paruvendu_api/outputs/proxy_list.txt'
 
 ROTATING_PROXY_LIST = [
 '80.48.119.28:8080',

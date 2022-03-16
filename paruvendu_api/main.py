@@ -1,0 +1,26 @@
+from scrapy.crawler import CrawlerProcess
+from scrapy.utils.project import get_project_settings
+from paruvendu_api.spiders.mass_data_harvester import DataHarvesterSpider1, DataHarvesterSpider2, DataHarvesterSpider3, DataHarvesterSpider4, DataHarvesterSpider5, DataHarvesterSpider6, DataHarvesterSpider7, DataHarvesterSpider8, DataHarvesterSpider9, DataHarvesterSpider10, DataHarvesterSpider11, DataHarvesterSpider12, DataHarvesterSpider13, DataHarvesterSpider14, DataHarvesterSpider15, DataHarvesterSpider16, DataHarvesterSpider17, DataHarvesterSpider18, DataHarvesterSpider19
+
+settings = get_project_settings()
+process = CrawlerProcess(settings)
+process.crawl(DataHarvesterSpider1)
+process.crawl(DataHarvesterSpider2)
+process.crawl(DataHarvesterSpider3)
+process.crawl(DataHarvesterSpider4)
+process.crawl(DataHarvesterSpider5)
+# process.crawl(DataHarvesterSpider6)
+# process.crawl(DataHarvesterSpider7)
+# process.crawl(DataHarvesterSpider8)
+# process.crawl(DataHarvesterSpider9)
+# process.crawl(DataHarvesterSpider10)
+# process.crawl(DataHarvesterSpider11)
+# process.crawl(DataHarvesterSpider12)
+# process.crawl(DataHarvesterSpider13)
+# process.crawl(DataHarvesterSpider14)
+# process.crawl(DataHarvesterSpider15)
+# process.crawl(DataHarvesterSpider16)
+# process.crawl(DataHarvesterSpider17)
+# process.crawl(DataHarvesterSpider18)
+# process.crawl(DataHarvesterSpider19)
+process.start()
