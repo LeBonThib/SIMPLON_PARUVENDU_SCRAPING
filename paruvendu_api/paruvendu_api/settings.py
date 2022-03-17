@@ -7,6 +7,9 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
+import scrapy_user_agents
+import rotating_proxies
+
 BOT_NAME = 'paruvendu_api'
 
 SPIDER_MODULES = ['paruvendu_api.spiders']

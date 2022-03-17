@@ -150,25 +150,6 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
-paruvendu_api/paruvendu_api/outputs/data_harvest1.json
-paruvendu_api/paruvendu_api/outputs/data_harvest2.json
-paruvendu_api/paruvendu_api/outputs/data_harvest3.json
-paruvendu_api/paruvendu_api/outputs/data_harvest4.json
-paruvendu_api/paruvendu_api/outputs/data_harvest5.json
-paruvendu_api/paruvendu_api/outputs/data_harvest6.json
-paruvendu_api/paruvendu_api/outputs/data_harvest7.json
-paruvendu_api/paruvendu_api/outputs/data_harvest8.json
-paruvendu_api/paruvendu_api/outputs/data_harvest9.json
-paruvendu_api/paruvendu_api/outputs/data_harvest10.json
-paruvendu_api/paruvendu_api/outputs/data_harvest11.json
-paruvendu_api/paruvendu_api/outputs/data_harvest12.json
-paruvendu_api/paruvendu_api/outputs/data_harvest13.json
-paruvendu_api/paruvendu_api/outputs/data_harvest14.json
-paruvendu_api/paruvendu_api/outputs/data_harvest15.json
-paruvendu_api/paruvendu_api/outputs/data_harvest16.json
-paruvendu_api/paruvendu_api/outputs/data_harvest17.json
-paruvendu_api/paruvendu_api/outputs/data_harvest18.json
-paruvendu_api/paruvendu_api/outputs/data_harvest19.json
 paruvendu_api/paruvendu_api/outputs/Free_Proxy_List1.txt
 paruvendu_api/paruvendu_api/outputs/Free_Proxy_List2.txt
 paruvendu_api/paruvendu_api/outputs/Free_Proxy_List3.txt

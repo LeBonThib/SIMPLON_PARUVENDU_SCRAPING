@@ -11,7 +11,7 @@ class DataHarvesterSpider1(scrapy.Spider):
         "FEEDS": {"./paruvendu_api/outputs/data_harvest1.json":{"format":"jsonlines"}}
         # "FEED_EXPORT_ENCODING": {"utf-8"}
     }
-    start_urls = url_list[0:9999]
+    start_urls = url_list[0:19999]
     # start_urls = ['https://www.paruvendu.fr/a/voiture-occasion/fiat/500/1260671363A1KVVOFI500']
     def parse(self, response):
         data_harvester_item = DataHarvesterItem()
@@ -32,8 +32,6 @@ class DataHarvesterSpider1(scrapy.Spider):
         data_harvester_item['actual_power'] = "N/A"
         data_harvester_item['body_colour'] = "N/A"
         data_harvester_item['body_type'] = "N/A"
-        data_harvester_item['warranty'] = "N/A"
-        data_harvester_item['control'] = "N/A"
         
         if response.status == 200:
             data_harvester_item['url'] = response.request.url
@@ -67,7 +65,7 @@ class DataHarvesterSpider1(scrapy.Spider):
             if base_car_information.find('li',{'class':'puiss'}) is not None:    
                 data_harvester_item['technical_power'] = base_car_information.find('li',{'class':'puiss'}).text.strip().replace("\n"," ").replace("  "," ").lower()
             if base_car_information.find('li',{'class':'por'}) is not None:    
-                data_harvester_item['door_nb'] = base_car_information.find('li',{'class':'por'}).text.strip().replace("\n"," ").replace("  "," ").lower()
+                data_harvester_item['seat_nb'] = base_car_information.find('li',{'class':'por'}).text.strip().replace("\n"," ").replace("  "," ").lower()
 
             complement = soup.find_all("li",{"class":"nologo"})
             for info in complement:
@@ -102,7 +100,7 @@ class DataHarvesterSpider2(DataHarvesterSpider1):
         "FEEDS": {"./paruvendu_api/outputs/data_harvest2.json":{"format":"jsonlines"}}
         # "FEED_EXPORT_ENCODING": {"utf-8"}
     }
-    start_urls = url_list[10000:19999]
+    start_urls = url_list[20000:39999]
 
 class DataHarvesterSpider3(DataHarvesterSpider1):
     name = 'data_harvester3'   
@@ -110,7 +108,7 @@ class DataHarvesterSpider3(DataHarvesterSpider1):
         "FEEDS": {"./paruvendu_api/outputs/data_harvest3.json":{"format":"jsonlines"}}
         # "FEED_EXPORT_ENCODING": {"utf-8"}
     }
-    start_urls = url_list[20000:29999]
+    start_urls = url_list[40000:59999]
 
 class DataHarvesterSpider4(DataHarvesterSpider1):
     name = 'data_harvester4'   
@@ -118,7 +116,7 @@ class DataHarvesterSpider4(DataHarvesterSpider1):
         "FEEDS": {"./paruvendu_api/outputs/data_harvest4.json":{"format":"jsonlines"}}
         # "FEED_EXPORT_ENCODING": {"utf-8"}
     }
-    start_urls = url_list[30000:39999]
+    start_urls = url_list[60000:79999]
 
 class DataHarvesterSpider5(DataHarvesterSpider1):
     name = 'data_harvester5'   
@@ -126,7 +124,7 @@ class DataHarvesterSpider5(DataHarvesterSpider1):
         "FEEDS": {"./paruvendu_api/outputs/data_harvest5.json":{"format":"jsonlines"}}
         # "FEED_EXPORT_ENCODING": {"utf-8"}
     }
-    start_urls = url_list[40000:49999]
+    start_urls = url_list[80000:99999]
 
 class DataHarvesterSpider6(DataHarvesterSpider1):
     name = 'data_harvester6'   
